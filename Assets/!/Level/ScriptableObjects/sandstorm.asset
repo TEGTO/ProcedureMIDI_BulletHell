@@ -1,0 +1,58 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f8e58e8f30dec80408d001778ce86842, type: 3}
+  m_Name: sandstorm
+  m_EditorClassIdentifier: Assembly-CSharp:Code:SongVisualizationData
+  audioClip: {fileID: 8300000, guid: 97a85ff8b7a99374593cf8a4aefad10f, type: 3}
+  midiFilePath: MIDI/sandstorm.mid
+  noteTime: 2
+  noteData:
+  - Note: 0
+    numberOfObjects: 26
+    ExplosionSpeed: 2
+  - Note: 1
+    numberOfObjects: 24
+    ExplosionSpeed: 3
+  - Note: 2
+    numberOfObjects: 22
+    ExplosionSpeed: 5
+  - Note: 3
+    numberOfObjects: 20
+    ExplosionSpeed: 6
+  - Note: 4
+    numberOfObjects: 18
+    ExplosionSpeed: 8
+  - Note: 5
+    numberOfObjects: 16
+    ExplosionSpeed: 10
+  - Note: 6
+    numberOfObjects: 14
+    ExplosionSpeed: 11
+  - Note: 7
+    numberOfObjects: 12
+    ExplosionSpeed: 13
+  - Note: 8
+    numberOfObjects: 10
+    ExplosionSpeed: 14
+  - Note: 9
+    numberOfObjects: 8
+    ExplosionSpeed: 16
+  - Note: 10
+    numberOfObjects: 6
+    ExplosionSpeed: 17
+  - Note: 11
+    numberOfObjects: 4
+    ExplosionSpeed: 19
+  explosionDistance: 10
+  safeZoneRadius: 10
+  despawnZoneRadius: 50
+  nmberOfObjectsCoeff: 2
