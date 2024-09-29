@@ -10,12 +10,9 @@ namespace Code
     public struct NoteData
     {
         public NoteName Note;
-        [SerializeField, FormerlySerializedAs("NumberOfObjects")]
-        private int numberOfObjects;
+        [SerializeField, FormerlySerializedAs("numberOfObjects")]
+        public int NumberOfObjects;
         public float ExplosionSpeed;
-
-        public int NumberOfObjects { get => (int)(numberOfObjects * NumberOfObjectsCoeff); }
-        public float NumberOfObjectsCoeff { get; set; }
     }
     [CreateAssetMenu(fileName = "SongVisualizationData", menuName = "ScriptableObjects/SongVisualizationData", order = 1)]
 
@@ -35,8 +32,10 @@ namespace Code
         private float safeZoneRadius = 5f;
         [SerializeField]
         private float despawnZoneRadius = 50f;
+        [SerializeField, FormerlySerializedAs("nmberOfObjectsCoeff")]
+        private float numberOfObjectsCoeff = 1f;
         [SerializeField]
-        private float nmberOfObjectsCoeff = 1f;
+        private float speedOfObjectsCoeff = 1f;
 
         public AudioClip AudioClip
         {
@@ -66,7 +65,8 @@ namespace Code
         public NoteData GetNoteDate(NoteName noteRestriction)
         {
             var note = noteData.First(x => x.Note == noteRestriction);
-            note.NumberOfObjectsCoeff = nmberOfObjectsCoeff;
+            note.NumberOfObjects = (int)(note.NumberOfObjects * numberOfObjectsCoeff);
+            note.ExplosionSpeed *= speedOfObjectsCoeff;
             return note;
         }
     }
